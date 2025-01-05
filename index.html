@@ -1,110 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>INWOOD</title>
-        <link rel="shortcut icon" href="assets/img/favicon.iso" type="image/x-icon">
-        <!-- start font link -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <!-- end font link -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INWOOD</title>
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.iso"
+      type="image/x-icon"
+    />
+    <!-- start font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end font link -->
 
-        <!-- start css file -->
-        <link rel="stylesheet" href="css/all.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <!-- end css file -->
+    <!-- start css file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- end css file -->
+  </head>
+  <body>
+    <!-- start header section -->
+    <header class="container">
+      <!-- Start Desktop Header Section -->
+      <div class="desktop-header flex justify-between align-center">
+        <!-- start Desktop header logo section -->
+        <div class="desktop-header-logo">
+          <a href="index.html">
+            <img src="assets/img/header-logo.png" alt="logo" />
+          </a>
+        </div>
+        <!-- end Desktop header logo section -->
 
-    </head>
-    <body>
-        <!-- start header section -->
-            <header class="container">
-                <div class="header flex justify-between align-center">
-                    <!-- start header logo section -->
-                    <div class="header-logo">
-                        <a href="index.html">
-                            <img src="assets/img/header-logo.png" alt="logo">
-                        </a>
-                    </div>
-                    <!-- end header logo section -->
-                
-                    <!-- start header navbar section -->
-                    <div class="flex justify-center nav">
-                        <ul class="header-navbar flex justify-between align-center">
-                            <li>
-                                <a href="index.html" class="nav-active">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">Products</a>
-                            </li>
-                            <li>
-                                <a href="#">Categories</a>
-                            </li>
-                            <li>
-                                <a href="#">About</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end header navbar section -->
+        <!-- start Desktop header navbar section -->
+        <div class="flex justify-center desktop-nav">
+          <ul class="desktop-header-navbar flex justify-between align-center">
+            <li>
+              <a href="index.html" class="desktop-nav-active">Home</a>
+            </li>
+            <li>
+              <a href="#">Products</a>
+            </li>
+            <li>
+              <a href="#">Categories</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <!-- end Desktop header navbar section -->
 
-                                        
-                    <!-- start header icon section -->
-                    <div class="header-icon justify-end">
-                        <ul class="flex justify-between align-center">
-                            <li>
-                                <a href="#">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-solid fa-circle-user"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end header icon section -->
+        <!-- start Desktop header icon section -->
+        <div class="desktop-header-icon justify-end">
+          <ul class="flex justify-between align-center">
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-circle-user"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end Desktop header icon section -->
+      </div>
+      <!-- End Desktop Header Section -->
 
-                    
-                    
-                </div>
-                
-                
-            </header>
-        <!-- end header section -->
+      <!-- Start laptop Header Section -->
+      <div class="laptop-header flex justify-between align-start">
+        <!-- start laptop header logo section -->
+        <div class="laptop-header-logo">
+          <a href="index.html">
+            <img src="assets/img/header-logo.png" alt="logo" />
+          </a>
+        </div>
+        <!-- end laptop header logo section -->
 
-        <!-- start hero section -->
-        <section class="hero">
-            <!-- start hero background -->
-            <div class="hero-bg">
-                <img src="assets/img/hero-bg.jpg" alt="hero-bg">
+        <!-- start laptop header navbar section -->
+        <div class="flex justify-center laptop-nav">
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li>
+                  <a href="#">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();"
+                      >Home</label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();"
+                      >Products</label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();"
+                      >Categories</label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();"
+                      >About</label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();"
+                      >Contact Us</label
+                    >
+                  </a>
+                </li>
+              </ul>
             </div>
-            <!-- end hero background -->
+          </nav>
+        </div>
+        <!-- end laptop header navbar section -->
 
-            <!-- start hero content -->
-            <div class="hero-content container flex flex-column">
-                <h1>Exclusive Deals of <br> Furniture Collection</h1>
-                <h2>Explore different categories. Find the best deals.</h2>
-                <a href="#">
-                    <span>Shop Now</span>
-                </a>
-            </div>
-            <!-- end hero content -->
-        </section>
-        <!-- end hero section -->
+        <!-- start laptop header icon section -->
+        <div class="laptop-header-icon justify-end">
+          <ul class="flex justify-between align-center">
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-circle-user"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end laptop header icon section -->
+      </div>
+      <!-- End laptop Header Section -->
+    </header>
+    <!-- end header section -->
 
-        <!--start js file-->
-        <script src="js/all.min.js"></script>
-        <script src="js/main.js"></script>
-        <!--end js file-->
-    </body>
+    <!-- start hero section -->
+    <section class="hero">
+      <!-- start hero background -->
+      <div class="hero-bg">
+        <img src="assets/img/hero-bg.jpg" alt="hero-bg" />
+      </div>
+      <!-- end hero background -->
+
+      <!-- start hero content -->
+      <div class="hero-content container flex flex-column">
+        <h1>
+          Exclusive Deals of <br />
+          Furniture Collection
+        </h1>
+        <h2>Explore different categories. Find the best deals.</h2>
+        <a href="#">
+          <span>Shop Now</span>
+        </a>
+      </div>
+      <!-- end hero content -->
+    </section>
+    <!-- end hero section -->
+
+    <!--start js file-->
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--end js file-->
+  </body>
 </html>
