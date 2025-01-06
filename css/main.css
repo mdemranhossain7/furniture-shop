@@ -252,6 +252,7 @@ header {
 /* Start laptop Header Section */
 .laptop-header {
   margin: 26px auto;
+  display: none;
 }
 
 /* start laptop header navbar section  */
@@ -372,6 +373,142 @@ header {
 /* end laptop header icon section */
 /* End laptop Header Section */
 
+/* Start mobile Header Section */
+.mobile-header {
+  margin: 15px auto;
+  display: none;
+}
+
+/* start mobile header navbar section  */
+/* .mobile-nav a {
+  font-size: 20px;
+  font-weight: 400;
+  color: #07484a;
+  margin: 0 15px;
+}
+.mobile-nav-active {
+  font-weight: 700 !important;
+}
+.mobile-nav a:hover {
+  font-weight: 700;
+} */
+#menuToggleMobile {
+  display: block;
+  position: fixed;
+  text-align: center;
+  z-index: 10;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggleMobile a {
+  text-decoration: none;
+  color: #07484a;
+  transition: color 0.3s ease;
+}
+#menuToggleMobile a:hover {
+  color: #5dfaff;
+}
+#menuToggleMobile input {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 10px;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggleMobile span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  left: 10px;
+  margin: 4px auto;
+  position: relative;
+  background: #07484a;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggleMobile span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggleMobile span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggleMobile input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #07484a;
+}
+#menuToggleMobile input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggleMobile input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menuMobile {
+  position: absolute;
+  width: 100vw;
+  margin: -60px auto;
+  padding: 70px 50px 20px 50px;
+  left: 0vw;
+  right: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #ffffff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menuMobile li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menuMobile li label {
+  cursor: pointer;
+}
+#menuToggleMobile input:checked ~ ul {
+  transform: none;
+}
+
+/* end mobile header navbar section  */
+/* start mobile header logo section  */
+.mobile-header-logo {
+  width: 30%;
+}
+.mobile-header-logo a {
+  width: 104px;
+}
+.mobile-header-logo img {
+  width: 100%;
+}
+/* end mobile header logo section  */
+
+/* start mobile header icon section */
+
+.mobile-header-icon a {
+  margin: 0 8px;
+  font-size: 21px;
+  color: #07484a;
+}
+/* end mobile header icon section */
+/* End mobile Header Section */
+
 /* end header section */
 
 /* start hero section */
@@ -432,7 +569,11 @@ header {
     width: 1140px;
     margin: 0 auto;
   }
+
   .laptop-header {
+    display: none;
+  }
+  .mobile-header {
     display: none;
   }
 }
@@ -446,6 +587,12 @@ header {
   .desktop-header {
     display: none;
   }
+  .laptop-header {
+    display: flex;
+  }
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* lg applies to medium devices (tablets, less than 992px) */
@@ -453,6 +600,15 @@ header {
   .container {
     width: 720px;
     margin: 0 auto;
+  }
+  .desktop-header {
+    display: none;
+  }
+  .laptop-header {
+    display: flex;
+  }
+  .mobile-header {
+    display: none;
   }
 }
 
@@ -462,6 +618,15 @@ header {
     width: 540px;
     margin: 0 auto;
   }
+  .desktop-header {
+    display: none;
+  }
+  .laptop-header {
+    display: flex;
+  }
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* sm applies to extra small devices (portrait phones, less than 576px) */
@@ -469,5 +634,14 @@ header {
   .container {
     width: 100%;
     margin: 0 auto;
+  }
+  .desktop-header {
+    display: none;
+  }
+  .laptop-header {
+    display: none;
+  }
+  .mobile-header {
+    display: flex;
   }
 }
