@@ -20,6 +20,10 @@ li {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Playfair Display", serif;
@@ -230,9 +234,11 @@ header {
   font-weight: 400;
   color: #07484a;
   margin: 0 15px;
+  transition: all 0.3s linear;
 }
 .desktop-nav-active {
   font-weight: 700 !important;
+  text-decoration: underline #07484a solid 5px !important;
 }
 .desktop-nav a:hover {
   font-weight: 700;
@@ -279,7 +285,7 @@ header {
 #menuToggle a {
   text-decoration: none;
   color: #07484a;
-  transition: color 0.3s ease;
+  transition: all 0.3s linear;
 }
 #menuToggle a:hover {
   color: #5dfaff;
@@ -373,6 +379,142 @@ header {
 /* end laptop header icon section */
 /* End laptop Header Section */
 
+/* Start tablet Header Section */
+.tablet-header {
+  margin: 15px auto;
+  display: none;
+}
+
+/* start tablet header navbar section  */
+/* .tablet-nav a {
+  font-size: 20px;
+  font-weight: 400;
+  color: #07484a;
+  margin: 0 15px;
+}
+.tablet-nav-active {
+  font-weight: 700 !important;
+}
+.tablet-nav a:hover {
+  font-weight: 700;
+} */
+#menuToggletablet {
+  display: block;
+  position: fixed;
+  text-align: center;
+  z-index: 10;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggletablet a {
+  text-decoration: none;
+  color: #07484a;
+  transition: all 0.3s linear;
+}
+#menuToggletablet a:hover {
+  color: #5dfaff;
+}
+#menuToggletablet input {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 10px;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggletablet span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  left: 10px;
+  margin: 4px auto;
+  position: relative;
+  background: #07484a;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggletablet span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggletablet span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggletablet input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #07484a;
+}
+#menuToggletablet input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggletablet input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menutablet {
+  position: absolute;
+  width: 100vw;
+  margin: -60px auto;
+  padding: 70px 50px 20px 50px;
+  left: -3vw;
+  right: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #ffffff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menutablet li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menutablet li label {
+  cursor: pointer;
+}
+#menuToggletablet input:checked ~ ul {
+  transform: none;
+}
+
+/* end tablet header navbar section  */
+/* start tablet header logo section  */
+.tablet-header-logo {
+  width: 30%;
+}
+.tablet-header-logo a {
+  width: 104px;
+}
+.tablet-header-logo img {
+  width: 100%;
+}
+/* end tablet header logo section  */
+
+/* start tablet header icon section */
+
+.tablet-header-icon a {
+  margin: 0 8px;
+  font-size: 21px;
+  color: #07484a;
+}
+/* end tablet header icon section */
+/* End tablet Header Section */
+
 /* Start mobile Header Section */
 .mobile-header {
   margin: 15px auto;
@@ -403,7 +545,7 @@ header {
 #menuToggleMobile a {
   text-decoration: none;
   color: #07484a;
-  transition: color 0.3s ease;
+  transition: all 0.3s linear;
 }
 #menuToggleMobile a:hover {
   color: #5dfaff;
@@ -520,11 +662,12 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 740px;
+  /* height: 740px; */
 }
 .hero-bg img {
   width: 100%;
   height: 100%;
+  border-radius: 0px 0px 50px 50px;
 }
 
 .hero-content {
@@ -547,12 +690,18 @@ header {
   font-family: "Open Sans", serif;
 }
 
-.hero-content a {
+.primary-btn {
   background: #70908b;
   padding: 20px 25px;
   border-radius: 10px 10px;
-  width: 13%;
+  border: transparent;
+  width: fit-content;
   text-align: center;
+  transition: all 0.2s linear;
+}
+
+.primary-btn:hover {
+  background: #4c6f6a;
 }
 
 .hero-content span {
@@ -573,6 +722,9 @@ header {
   .laptop-header {
     display: none;
   }
+  .tablet-header {
+    display: none;
+  }
   .mobile-header {
     display: none;
   }
@@ -590,8 +742,17 @@ header {
   .laptop-header {
     display: flex;
   }
+  .tablet-header {
+    display: none;
+  }
   .mobile-header {
     display: none;
+  }
+  .hero-content {
+    gap: 30px;
+  }
+  .hero-content h1 {
+    font-size: 48px;
   }
 }
 
@@ -605,10 +766,20 @@ header {
     display: none;
   }
   .laptop-header {
+    display: none;
+  }
+  .tablet-header {
     display: flex;
   }
   .mobile-header {
     display: none;
+  }
+  .hero-content {
+    padding: 50px 0;
+    gap: 20px;
+  }
+  .hero-content h1 {
+    font-size: 48px;
   }
 }
 
@@ -622,10 +793,31 @@ header {
     display: none;
   }
   .laptop-header {
-    display: flex;
+    display: none;
+  }
+  .tablet-header {
+    display: none;
   }
   .mobile-header {
-    display: none;
+    display: flex;
+  }
+  .hero-content {
+    padding: 50px 0;
+    gap: 20px;
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  .hero-content h2 {
+    font-size: 18px;
+  }
+  .primary-btn {
+    padding: 12px 20px;
+    margin: 0 auto;
+  }
+  .hero-content span {
+    font-size: 18px;
   }
 }
 
