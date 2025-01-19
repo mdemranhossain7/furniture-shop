@@ -398,7 +398,7 @@ header {
 .tablet-nav a:hover {
   font-weight: 700;
 } */
-#menuToggletablet {
+#menuToggleTablet {
   display: block;
   position: fixed;
   text-align: center;
@@ -406,15 +406,152 @@ header {
   -webkit-user-select: none;
   user-select: none;
 }
-#menuToggletablet a {
+#menuToggleTablet a {
   text-decoration: none;
   color: #07484a;
   transition: all 0.3s linear;
 }
-#menuToggletablet a:hover {
+#menuToggleTablet a:hover {
   color: #5dfaff;
 }
-#menuToggletablet input {
+#menuToggleTablet input {
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -50px;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggleTablet span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  left: -25px;
+  margin: 5px auto;
+  position: relative;
+  background: #07484a;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggleTablet span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggleTablet span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggleTablet input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, 0px);
+  background: #07484a;
+}
+#menuToggleTablet input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggleTablet input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, 0px);
+}
+
+#menuTablet {
+  position: absolute;
+  width: 100vw;
+  margin: -60px auto;
+  padding: 70px 50px 20px 50px;
+  left: -53vw;
+  right: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #ffffff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menuTablet li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menuTablet li label {
+  cursor: pointer;
+}
+#menuToggleTablet input:checked ~ ul {
+  transform: none;
+}
+
+/* end tablet header navbar section  */
+/* start tablet header logo section  */
+.tablet-header-logo {
+  width: 30%;
+}
+.tablet-header-logo a {
+  width: 144px;
+  display: inline-block;
+}
+.tablet-header-logo img {
+  width: 100%;
+}
+/* end tablet header logo section  */
+
+/* start tablet header icon section */
+
+.tablet-header-icon a {
+  margin: 0 15px;
+  font-size: 27px;
+  color: #07484a;
+}
+/* end tablet header icon section */
+/* End tablet Header Section */
+
+/* Start landscape mobile Header Section */
+.landscape-mobile-header {
+  margin: 15px auto;
+  display: none;
+}
+
+/* start landscape mobile header navbar section  */
+/* .landscape mobile-nav a {
+  font-size: 20px;
+  font-weight: 400;
+  color: #07484a;
+  margin: 0 15px;
+}
+.landscape mobile-nav-active {
+  font-weight: 700 !important;
+}
+.landscape mobile-nav a:hover {
+  font-weight: 700;
+} */
+#menuTogglelandscapeMobile {
+  display: block;
+  position: fixed;
+  text-align: center;
+  z-index: 10;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuTogglelandscapeMobile a {
+  text-decoration: none;
+  color: #07484a;
+  transition: all 0.3s linear;
+}
+#menuTogglelandscapeMobile a:hover {
+  color: #5dfaff;
+}
+#menuTogglelandscapeMobile input {
   display: block;
   width: 30px;
   height: 30px;
@@ -428,7 +565,7 @@ header {
   -webkit-touch-callout: none;
 }
 
-#menuToggletablet span {
+#menuTogglelandscapeMobile span {
   display: block;
   width: 30px;
   height: 4px;
@@ -443,33 +580,33 @@ header {
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggletablet span:first-child {
+#menuTogglelandscapeMobile span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggletablet span:nth-last-child(2) {
+#menuTogglelandscapeMobile span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggletablet input:checked ~ span {
+#menuTogglelandscapeMobile input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #07484a;
 }
-#menuToggletablet input:checked ~ span:nth-last-child(3) {
+#menuTogglelandscapeMobile input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-#menuToggletablet input:checked ~ span:nth-last-child(2) {
+#menuTogglelandscapeMobile input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menutablet {
+#menulandscapeMobile {
   position: absolute;
   width: 100vw;
   margin: -60px auto;
   padding: 70px 50px 20px 50px;
-  left: -3vw;
+  left: 0vw;
   right: 0;
   box-sizing: border-box;
   overflow-y: auto;
@@ -481,39 +618,39 @@ header {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menutablet li {
+#menulandscapeMobile li {
   padding: 10px 0;
   font-size: 22px;
 }
-#menutablet li label {
+#menulandscapeMobile li label {
   cursor: pointer;
 }
-#menuToggletablet input:checked ~ ul {
+#menuTogglelandscapeMobile input:checked ~ ul {
   transform: none;
 }
 
-/* end tablet header navbar section  */
-/* start tablet header logo section  */
-.tablet-header-logo {
+/* end landscape mobile header navbar section  */
+/* start landscape mobile header logo section  */
+.landscape-mobile-header-logo {
   width: 30%;
 }
-.tablet-header-logo a {
+.landscape-mobile-header-logo a {
   width: 104px;
 }
-.tablet-header-logo img {
+.landscape-mobile-header-logo img {
   width: 100%;
 }
-/* end tablet header logo section  */
+/* end landscape mobile header logo section  */
 
-/* start tablet header icon section */
+/* start landscape mobile header icon section */
 
-.tablet-header-icon a {
+.landscape-mobile-header-icon a {
   margin: 0 8px;
   font-size: 21px;
   color: #07484a;
 }
-/* end tablet header icon section */
-/* End tablet Header Section */
+/* end landscape mobile header icon section */
+/* End landscape mobile Header Section */
 
 /* Start mobile Header Section */
 .mobile-header {
@@ -631,13 +768,14 @@ header {
 /* end mobile header navbar section  */
 /* start mobile header logo section  */
 .mobile-header-logo {
-  width: 30%;
+  width: fit-content;
 }
 .mobile-header-logo a {
   width: 104px;
 }
 .mobile-header-logo img {
   width: 100%;
+  margin: 0px 30px;
 }
 /* end mobile header logo section  */
 
@@ -725,6 +863,9 @@ header {
   .tablet-header {
     display: none;
   }
+  .landscape-mobile-header {
+    display: none;
+  }
   .mobile-header {
     display: none;
   }
@@ -743,6 +884,9 @@ header {
     display: flex;
   }
   .tablet-header {
+    display: none;
+  }
+  .landscape-mobile-header {
     display: none;
   }
   .mobile-header {
@@ -771,6 +915,9 @@ header {
   .tablet-header {
     display: flex;
   }
+  .landscape-mobile-header {
+    display: none;
+  }
   .mobile-header {
     display: none;
   }
@@ -786,7 +933,8 @@ header {
 /* md applies to small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .container {
-    width: 540px;
+    /* width: 540px; */
+    width: 100%;
     margin: 0 auto;
   }
   .desktop-header {
@@ -798,8 +946,11 @@ header {
   .tablet-header {
     display: none;
   }
-  .mobile-header {
+  .landscape-mobile-header {
     display: flex;
+  }
+  .mobile-header {
+    display: none;
   }
   .hero-content {
     padding: 50px 0;
