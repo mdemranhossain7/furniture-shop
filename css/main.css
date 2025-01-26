@@ -219,9 +219,13 @@ body {
 /* Common Classes */
 
 /* start header section */
+.header-hero {
+  margin-bottom: 100px;
+  overflow: hidden;
+}
 header {
   position: relative;
-  z-index: 999;
+  z-index: 100;
 }
 /* Start Desktop Header Section */
 .desktop-header {
@@ -849,6 +853,12 @@ header {
   font-family: "Open Sans", serif;
 }
 /* end hero section */
+
+/* Start Category Section */
+.category {
+  margin: 100px 150px;
+}
+/* End Category Section */
 
 /* xxl applies to x-large devices (large desktops, less than 1400px) */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
